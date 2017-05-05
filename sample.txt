@@ -1,3 +1,16 @@
-In some versions of sed, the expression must be preceded by -e to indicate that an expression follows. The s stands for substitute, while the g stands for global, which means that all matching occurrences in the line would be replaced. The regular expression (i.e. pattern) to be searched is placed after the first delimiting symbol (slash here) and the replacement follows the second symbol. Slash (/) is the conventional symbol, originating in the character for "search" in ed, but any other could be used to make syntax more readable if it does not occur in the pattern or replacement (see below); this is useful to avoid "leaning toothpick syndrome".
+line one
+line two
+line three
+line four
 
-The substitution command, which originates in search-and-replace in ed, implements simple parsing and templating. The regexp provides both pattern matching and saving text via sub-expressions, while the replacement can be either literal text, or a format string containing the characters & for "entire match" or the special escape sequences \1 through \9 for the nth saved sub-expression. For example, sed -r "s/(cat|dog)s?/\1s/g" replaces all occurrences of "cat" or "dog" with "cats" or "dogs", without duplicating an existing "s": (cat|dog) is the 1st (and only) saved sub-expression in the regexp, and \1 in the format string substitutes this into the output.
+line five
+line six
+
+
+line seven
+
+
+
+
+
+line eight
